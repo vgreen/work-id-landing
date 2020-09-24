@@ -36,6 +36,7 @@
     background-color:  rgb(230 240 251);
 }
 
+
 .header {
     height: 150px;
     display: flex;
@@ -60,10 +61,11 @@
         margin-right: 25px;
         color: #201f3b;
         white-space: nowrap;
+        padding-bottom: 7px;
     }
 
     .top-menu-item:hover{
-        border-bottom: 2px solid blue;
+        border-bottom: 2px solid #538df7;
     }
 
 .title {
@@ -96,7 +98,7 @@
         }
 
 .advantages{
-    height: 720px;
+    padding: 80px 0;
     width: 100%;
 }
 
@@ -121,7 +123,6 @@
 
             .advantages-item-point{
                 display: flex;
-                justify-content: space-between;
                 line-height: 1.4;
                 color: #696c76;
                 margin-bottom: 16px;
@@ -135,14 +136,12 @@
             }
 
 .solution{
-    height: 887px;
+    padding: 100px 0;
     background-color:  rgb(230 240 251);
 }
     .solution-container{
-        margin-top: 50px;
     }
         .solution-title{
-            margin-top: 35px;
             margin-bottom: 60px;
             font-size: 36px;
             font-weight: bold;
@@ -177,10 +176,10 @@
                 color: #201f3b;
             }
 .how-to{
-    height: 1200px;
+    padding: 100px 0 300px 0;
 }
     .how-to-container{
-        margin-top: 80px;
+        margin: 80px 0;
     }
         .how-to-title{
             font-size: 36px;
@@ -307,7 +306,7 @@
                     margin-right: 4px;
                 }
 .form-section{
-    height: 800px;
+    padding: 40px 0;
     background: #538df7;
 }
     .form-card{
@@ -381,3 +380,194 @@
         font-size: 16px;
         font-weight: 500;
     }
+
+@media( max-width: 767px ){
+    .section{
+        padding: 30px 14px;
+    }
+
+    .first-section-wrapper{
+        background-size: auto 70%;
+    }
+
+    .top-menu{
+        display: none;
+    }
+
+    .top-menu-item:hover{
+        border-bottom: 2px solid #538df7;
+    }
+
+    .title {
+        width: 100%;
+        height: 400px;
+    }
+
+    .title-wrapper{
+        padding: 50px 0;
+    }
+    .main-title{
+        width: 100%;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .main-subtitle{
+        width: 100%;
+        color: white;
+        font-size: 15px;
+    }
+
+    .advantages-subtitle{
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .advantages-container > .elements{
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .advantages-item{
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .advantages-item-point{
+        font-size: 14px;
+    }
+
+    .solution-container{
+        margin-top: 50px;
+    }
+
+    .solution-title{
+        font-size: 26px;
+    }
+    .solution-points {
+        flex-direction: column;
+    }
+
+    .solution-advantage{
+        width: 100%;
+        font-size: 16px;
+    }
+    .how-to{
+        padding-bottom: 280px;
+    }
+    .how-to-container{
+        margin-top: 80px;
+    }
+    .how-to-title{
+        font-size: 26px;
+    }
+    .how-to-subtitle{
+        font-size: 14px;
+    }
+    .how-to-items{
+        flex-direction: column;
+    }
+    .how-to-item{
+        padding: 30px;
+        margin: 20px;
+    }
+    .how-to-item > p{
+        font-size: 14px;
+    }
+    .start{
+        margin-top: -300px;
+        height: 600px;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .start-title{
+        font-size: 26px;
+    }
+    .start-price{
+        font-size: 46px;
+    }
+    .start-price-label{
+        font-size: 14px;
+    }
+    .start-button{
+        width: 100%;
+    }
+
+    .requirements-container > h2{
+        font-size: 26px;
+    }
+    .requirements-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .requirements-item > img{
+        width: 80%;
+    }
+    .requirements-description{
+        margin-top: 60px;
+    }
+    .requirements-description > h3{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .requirements-description > p{
+        margin-top: 20px;
+    }
+    .requirements-list{
+        margin-left: 20px;
+    }
+    .requirements-list > li{
+        margin-top: 15px;
+        color: #37a4ff;
+    }
+    .requirements-list > li > span{
+        color: white;
+        font-size: 15px;
+        margin-right: 4px;
+    }
+    .form-section{
+        background: #538df7;
+    }
+    .form-card{
+        width: 100%;
+    }
+    .form{
+        width: 100%;
+        padding: 10px;
+    }
+    .form-title{
+        font-size: 26px;
+    }
+
+    .form-subtitle{
+        font-size: 14px;
+    }
+
+    .form-input{
+        width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .form-input > p{
+        font-size: 14px;
+    }
+
+    .form-input > input{
+        width: 100%;
+    }
+
+    .form-button{
+        width: 100%;
+    }
+
+    .footer{
+        background: #538df7;
+        height: 20px;
+    }
+
+}
+
