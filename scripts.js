@@ -1,3 +1,4 @@
+
 window.onload = () => {
   document.getElementsByClassName('open')[0].onclick = () => {
     document.getElementsByClassName('mobile-menu-content')[0].classList.add('opened');
