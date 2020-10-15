@@ -1,0 +1,29 @@
+{
+  "name": "work-id-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgreen/work-id-landing.git"
+  },
+  "author": "kolesnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vgreen/work-id-landing/issues"
+  },
+  "homepage": "https://github.com/vgreen/work-id-landing#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^3.2.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8.1.1"
+  }
+}
