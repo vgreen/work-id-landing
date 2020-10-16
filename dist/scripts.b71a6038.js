@@ -128,6 +128,32 @@ window.onload = function () {
     document.getElementsByClassName('mobile-menu-content')[0].classList.remove('opened');
     document.getElementsByTagName('body')[0].classList.remove('stop-scroll');
   };
+
+  document.getElementById('submit-form').onclick = function () {
+    var data = {
+      'phone': document.getElementById('phone').value,
+      'fio': document.getElementById('fio').value,
+      'email': document.getElementById('email').value
+    };
+    console.log(data);
+    var request_options = {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      mode: 'cors',
+      method: "POST",
+      body: JSON.stringify(data)
+    };
+    fetch('https://idwork.enface.ai/idwork', request_options).then(function (res) {
+      return res.json();
+    }).then(function (res) {
+      console.log(res);
+
+      if (res && res.ok) {
+        document.getElementById('result').innerHTML = 'Запрос успешно отправлен';
+      }
+    });
+  };
 };
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -157,7 +183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64917" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56673" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

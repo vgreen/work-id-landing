@@ -14,7 +14,6 @@
     <title>Enface</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.2e70f008.png">
     <link rel="stylesheet" href="/styles.8986bff4.css">
-    <script src="/scripts.b71a6038.js"></script>
 <script src="/styles.8986bff4.js"></script></head>
 <body>
 <div class="first-section-wrapper">
@@ -33,7 +32,7 @@
         <div class="mobile-menu-wrapper container">
             <div class="mobile-menu-items container section">
                 <a href="#advantages">
-                    <div class="mobile-menu-item">Приемущества</div>
+                    <div class="mobile-menu-item">Преимущества</div>
                 </a>
                 <a href="#solution">
                     <div class="mobile-menu-item">Решение</div>
@@ -62,7 +61,7 @@
         </div>
         <div class="top-menu">
             <a href="#advantages">
-                <div class="top-menu-item">Приемущества</div>
+                <div class="top-menu-item">Преимущества</div>
             </a>
             <a href="#solution">
                 <div class="top-menu-item">Решение</div>
@@ -265,25 +264,30 @@
             <p class="form-subtitle">Оставьте заявку и наш менеджер свяжется с вами для уточнения подробностей.</p>
             <label class="form-input">
                 <p>Телефон</p>
-                <input type="tel">
+                <input type="tel" id="phone" placeholder="+7 000 000 00 00">
             </label>
             <label class="form-input">
                 <p>Компания</p>
-                <input type="text">
+                <input type="text" id="fio" placeholder="Название Вашей компании">
             </label>
             <label class="form-input">
                 <p>E-mail</p>
-                <input type="email">
+                <input type="email" id="email" placeholder="example@mail.com">
             </label>
-            <button class="form-button">Отправить</button>
+            <label><p id="result"></p></label>
+            <button id="submit-form" class="form-button">Отправить</button>
         </div>
     </div>
 </div>
 <div class="footer section container">
-    <p>© enface.ai</p>
+    <p><a href="https://enface.ai/"> © enface.ai</a></p>
+    <br>
+    <p><a href="tel:+74994443576">+7 499 444-35-76</a></p>
     <br>
     <p style="font-size: 12px">Решение построено на базе платформы распознавания лиц Enface Ai Platform</p>
 </div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/scripts.b71a6038.js"></script>
 </body>
 
 </html>

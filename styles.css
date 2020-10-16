@@ -1,3 +1,24 @@
+@font-face {
+    font-family: SFProDisplay;
+    src: url("./fonts/SF-Pro-Display-Regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: StyreneAWeb;
+    src: url("./fonts/StyreneAWeb-Bold.woff2");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: StyreneAWeb;
+    src: url("./fonts/StyreneAWeb-Regular.woff2");
+    font-style: normal;
+    font-weight: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -59,7 +80,7 @@
 
     .top-menu-item{
         height: 18px;
-        font-size: 14px;
+        font-size: 16px;
         transition: all .3s;
         border-bottom: 2px solid transparent;
         margin-right: 25px;
@@ -94,6 +115,7 @@
         }
 
         .main-subtitle{
+            margin-top: 15px;
             width: 790px;
             height: 34px;
             font-size: 24px;
@@ -107,6 +129,7 @@
 }
 
     .advantages-subtitle{
+        font-family: StyreneAWeb, sans-serif;
         font-size: 48px;
         font-weight: bold;
         margin: 15px 0 25px 0;
@@ -146,6 +169,7 @@
     .solution-container{
     }
         .solution-title{
+            font-family: StyreneAWeb, sans-serif;
             margin-bottom: 60px;
             font-size: 36px;
             font-weight: bold;
@@ -171,6 +195,7 @@
                 }
 
             .solution-advantage{
+                font-family: StyreneAWeb, sans-serif;
                 margin-top: 45px;
                 width: 652px;
                 padding: 48px 30px;
@@ -186,6 +211,7 @@
         margin: 80px 0;
     }
         .how-to-title{
+            font-family: StyreneAWeb, sans-serif;
             font-size: 36px;
             font-weight: bold;
             color: #201f3b;
@@ -206,6 +232,7 @@
                 margin: 20px;
             }
             .how-to-item > p{
+                font-family: StyreneAWeb, sans-serif;
                 margin-top: 25px;
                 font-size: 16px;
                 font-weight: 600;
@@ -239,12 +266,14 @@
     justify-content: space-between;
 }
     .start-title{
+        font-family: StyreneAWeb, sans-serif;
         font-size: 36px;
         font-weight: bold;
         color: #201f3b;
         margin-top: 15px;
     }
     .start-price{
+        font-family: StyreneAWeb, sans-serif;
         margin-top: 50px;
         color: #538df7;
         font-size: 56px;
@@ -275,6 +304,7 @@
         color: white;
     }
         .requirements-container > h2{
+            font-family: StyreneAWeb, sans-serif;
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 50px;
@@ -290,7 +320,8 @@
                 align-items: flex-start;
             }
                 .requirements-description > h3{
-                    font-size: 24px;
+                    font-family: StyreneAWeb, sans-serif;
+                    font-size: 22px;
                     font-weight: bold;
                     margin-bottom: 20px;
                 }
@@ -322,6 +353,7 @@
         }
 
         .form-title{
+            font-family: StyreneAWeb, sans-serif;
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 40px;
@@ -339,12 +371,14 @@
         }
 
         .form-input > p{
+            font-family: StyreneAWeb, sans-serif;
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 6px;
         }
 
         .form-input > input{
+            margin-bottom: 28px;
             border: none;
             border-radius: 8px;
             padding: 8px;
@@ -359,6 +393,12 @@
             border: none;
         }
 
+        .form-input > input::placeholder{
+            line-height: 1.7;
+            letter-spacing: 0.4px;
+            color: rgba(105, 108, 118, 0.52);
+        }
+
         .form-button{
             border: none;
             font-size: 18px;
@@ -369,6 +409,12 @@
             border-radius: 20px;
             background-color: #538df7;
             margin-top: 33px;
+            cursor: pointer;
+            transition: all .4s ease-in-out;
+        }
+
+        .form-button:hover {
+            opacity: .9;
         }
 
         .form-button:focus{
@@ -376,13 +422,17 @@
         }
 .footer{
     background: #538df7;
-    height: 100px;
+    height: 150px;
 }
 
     .footer > p{
         color: white;
         font-size: 16px;
         font-weight: 500;
+    }
+    .footer > p > a{
+        text-decoration: none;
+        color: white;
     }
 
 .mobile-menu{
@@ -450,6 +500,10 @@
     height: 50px;
     font-size: 18px;
     color: white;
+}
+
+#result{
+    color: rgba(7, 159, 28, 0.65);
 }
 
 @media( max-width: 1024px ){
@@ -569,11 +623,13 @@
         flex-direction: column;
     }
     .how-to-item{
-        padding: 30px;
-        margin: 20px;
+        width: 90%;
     }
     .how-to-item > p{
         font-size: 14px;
+    }
+    .how-to-list{
+        width: 100%;
     }
     .start-section{
         height: 420px;
