@@ -119,15 +119,24 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"scripts.js":[function(require,module,exports) {
 window.onload = function () {
-  document.getElementsByClassName('open')[0].onclick = function () {
+  var openMenu = function openMenu() {
     document.getElementsByClassName('mobile-menu-content')[0].classList.add('opened');
     document.getElementsByTagName('body')[0].classList.add('stop-scroll');
   };
 
-  document.getElementsByClassName('close')[0].onclick = function () {
+  var closeMenu = function closeMenu() {
+    console.log(1);
     document.getElementsByClassName('mobile-menu-content')[0].classList.remove('opened');
     document.getElementsByTagName('body')[0].classList.remove('stop-scroll');
   };
+
+  document.getElementsByClassName('open')[0].onclick = openMenu;
+  document.getElementsByClassName('close')[0].onclick = closeMenu;
+  var links = document.getElementsByClassName('mobile-menu-item');
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].onclick = closeMenu;
+  }
 
   var showMessage = function showMessage(msg) {
     document.getElementById('result').innerHTML = msg;

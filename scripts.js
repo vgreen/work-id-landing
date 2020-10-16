@@ -1,12 +1,23 @@
 
 window.onload = () => {
-  document.getElementsByClassName('open')[0].onclick = () => {
+
+  const openMenu = () => {
     document.getElementsByClassName('mobile-menu-content')[0].classList.add('opened');
     document.getElementsByTagName('body')[0].classList.add('stop-scroll');
   };
-  document.getElementsByClassName('close')[0].onclick = () => {
+
+  const closeMenu = () => {
+    console.log(1)
     document.getElementsByClassName('mobile-menu-content')[0].classList.remove('opened');
     document.getElementsByTagName('body')[0].classList.remove('stop-scroll');
+  };
+
+  document.getElementsByClassName('open')[0].onclick = openMenu;
+  document.getElementsByClassName('close')[0].onclick = closeMenu;
+
+  const links = document.getElementsByClassName('mobile-menu-item');
+  for (let i = 0; i < links.length; i++) {
+    links[i].onclick = closeMenu;
   }
 
   const showMessage = (msg) => {
