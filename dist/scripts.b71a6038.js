@@ -129,30 +129,35 @@ window.onload = function () {
     document.getElementsByTagName('body')[0].classList.remove('stop-scroll');
   };
 
+  var showMessage = function showMessage(msg) {
+    document.getElementById('result').innerHTML = msg;
+  };
+
   document.getElementById('submit-form').onclick = function () {
     var data = {
       'phone': document.getElementById('phone').value,
       'fio': document.getElementById('fio').value,
       'email': document.getElementById('email').value
     };
-    console.log(data);
-    var request_options = {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      mode: 'cors',
-      method: "POST",
-      body: JSON.stringify(data)
-    };
-    fetch('https://idwork.enface.ai/idwork', request_options).then(function (res) {
-      return res.json();
-    }).then(function (res) {
-      console.log(res);
+    if (!(data.email && data.phone && data.fio)) showMessage('<p class="red-text">Заполните все поля</p>');else {
+      var request_options = {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        mode: 'cors',
+        method: "POST",
+        body: JSON.stringify(data)
+      };
+      fetch('https://idwork.enface.ai/idwork', request_options).then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        console.log(res);
 
-      if (res && res.ok) {
-        document.getElementById('result').innerHTML = 'Запрос успешно отправлен';
-      }
-    });
+        if (res && res.ok) {
+          showMessage('<p class="green-text">Запрос успешно отправлен</p>');
+        }
+      });
+    }
   };
 };
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

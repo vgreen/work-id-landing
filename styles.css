@@ -502,7 +502,11 @@
     color: white;
 }
 
-#result{
+.red-text{
+    color: #ff5153;
+}
+
+.green-text{
     color: rgba(7, 159, 28, 0.65);
 }
 
