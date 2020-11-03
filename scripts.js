@@ -1,6 +1,24 @@
 
 window.onload = () => {
 
+  //
+  // sticky header
+  //
+
+  let stickyDiv = document.getElementById('sticky');
+  let stickyValue = 0; // will stick on the top of the div
+  stickyDiv.style.top = stickyValue + 'px';
+
+  document.body.onscroll = () => {
+    let distance = window.scrollY;
+    if (distance <= (stickyValue + 10)) {
+      stickyDiv.classList.remove('sticked')
+    }
+    else {
+      stickyDiv.classList.add('sticked')
+    }
+  };
+
   const openMenu = () => {
     document.getElementsByClassName('mobile-menu-content')[0].classList.add('opened');
     document.getElementsByTagName('body')[0].classList.add('stop-scroll');
