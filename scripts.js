@@ -9,6 +9,13 @@ window.onload = () => {
   let stickyValue = 0; // will stick on the top of the div
   stickyDiv.style.top = stickyValue + 'px';
 
+  if (window.scrollY <= (stickyValue + 10)) {
+    stickyDiv.classList.remove('sticked')
+  }
+  else {
+    stickyDiv.classList.add('sticked')
+  }
+
   document.body.onscroll = () => {
     let distance = window.scrollY;
     if (distance <= (stickyValue + 10)) {

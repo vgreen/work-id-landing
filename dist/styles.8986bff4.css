@@ -48,7 +48,7 @@
 }
 
 .header {
-    transition: all .3s ease;
+    transition: all .1s ease;
     position: fixed;
     top: 0px;
     height: 80px;
@@ -527,7 +527,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: 30;
     transform: translateX(100%);
     opacity: .3;
     transition: all .2s ease-in-out;
@@ -539,6 +539,7 @@
 }
 
 .mobile-menu-wrapper{
+    padding-top: 50px;
     height: 99%;
     justify-content: space-between;
 }
@@ -568,6 +569,49 @@
 
 .green-text{
     color: rgba(7, 159, 28, 0.65);
+}
+
+@media(max-width: 800px){
+
+    .requirements-container > h2{
+        font-size: 26px;
+    }
+    .requirements-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 370px;
+    }
+    .requirements-item > img{
+        width: 80%;
+    }
+    .requirements-description{
+        margin-top: 60px;
+        margin-left: 0;
+        align-items: center;
+    }
+    .requirements-description > h3{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .requirements-description > p{
+        margin-top: 20px;
+    }
+    .requirements-list{
+        margin-left: 20px;
+    }
+    .requirements-list > li{
+        margin-top: 15px;
+        color: #37a4ff;
+    }
+    .requirements-list > li > span{
+        color: white;
+        font-size: 15px;
+        margin-right: 4px;
+    }
 }
 
 @media( max-width: 1024px ){
@@ -635,6 +679,7 @@
         font-size: 24px;
         font-weight: bold;
         color: white;
+        height: auto;
     }
 
     .main-subtitle{
@@ -719,45 +764,6 @@
     }
     .start-button{
         width: 100%;
-    }
-
-    .requirements-container > h2{
-        font-size: 26px;
-    }
-    .requirements-item{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .requirements-item > img{
-        width: 80%;
-    }
-    .requirements-description{
-        margin-top: 60px;
-        margin-left: auto;
-        align-items: center;
-    }
-    .requirements-description > h3{
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .requirements-description > p{
-        margin-top: 20px;
-    }
-    .requirements-list{
-        margin-left: 20px;
-    }
-    .requirements-list > li{
-        margin-top: 15px;
-        color: #37a4ff;
-    }
-    .requirements-list > li > span{
-        color: white;
-        font-size: 15px;
-        margin-right: 4px;
     }
     .form-section{
         background: #538df7;

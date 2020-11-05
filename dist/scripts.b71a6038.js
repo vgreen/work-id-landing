@@ -127,6 +127,12 @@ window.onload = function () {
 
   stickyDiv.style.top = stickyValue + 'px';
 
+  if (window.scrollY <= stickyValue + 10) {
+    stickyDiv.classList.remove('sticked');
+  } else {
+    stickyDiv.classList.add('sticked');
+  }
+
   document.body.onscroll = function () {
     var distance = window.scrollY;
 
@@ -215,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63444" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50156" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
