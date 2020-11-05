@@ -1,0 +1,36 @@
+<svg width="708" height="250" viewBox="0 0 708 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<g filter="url(#filter0_dddd)">
+<path d="M180.19 60H0V250H334C319.497 250 306.122 242.179 299.016 229.543L215.174 80.4572C208.068 67.821 194.693 60 180.19 60Z" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_dddd" x="-39" y="59" width="412" height="268" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="5.71073"/>
+<feGaussianBlur stdDeviation="0.883116"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.192157 0 0 0 0 0.188235 0 0 0 0 0.470588 0 0 0 0.0199328 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="10.6507"/>
+<feGaussianBlur stdDeviation="2.4417"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.192157 0 0 0 0 0.188235 0 0 0 0 0.470588 0 0 0 0.0316247 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="16.3064"/>
+<feGaussianBlur stdDeviation="5.87868"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.192157 0 0 0 0 0.188235 0 0 0 0 0.470588 0 0 0 0.0434607 0"/>
+<feBlend mode="normal" in2="effect2_dropShadow" result="effect3_dropShadow"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="38"/>
+<feGaussianBlur stdDeviation="19.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.192157 0 0 0 0 0.188235 0 0 0 0 0.470588 0 0 0 0.07 0"/>
+<feBlend mode="normal" in2="effect3_dropShadow" result="effect4_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow" result="shape"/>
+</filter>
+<clipPath id="clip0">
+<rect width="708" height="250" fill="white"/>
+</clipPath>
+</defs>
+</svg>
