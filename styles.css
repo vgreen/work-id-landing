@@ -591,6 +591,7 @@
     .first-section-wrapper{
         background-size: auto 70%;
         padding-top: 0px;
+        height: 400px;
     }
     .title-wrapper{
         position: absolute;
@@ -734,11 +735,14 @@
     }
     .requirements-description{
         margin-top: 60px;
+        margin-left: auto;
+        align-items: center;
     }
     .requirements-description > h3{
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 20px;
+        text-align: center;
     }
     .requirements-description > p{
         margin-top: 20px;
