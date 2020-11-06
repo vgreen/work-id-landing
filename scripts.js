@@ -26,6 +26,8 @@ window.onload = () => {
     }
   };
 
+  const emailRegex = /\S+@\S+\.\w+/;
+
   const openMenu = () => {
     document.getElementsByClassName('mobile-menu-content')[0].classList.add('opened');
     document.getElementsByTagName('body')[0].classList.add('stop-scroll');
@@ -45,6 +47,10 @@ window.onload = () => {
     links[i].onclick = closeMenu;
   }
 
+  const validEmail = (email) => {
+    return emailRegex.test(email);
+  };
+
   const showMessage = (msg) => {
     document.getElementById('result').innerHTML = msg;
   };
@@ -57,22 +63,33 @@ window.onload = () => {
     };
     if (!(data.email && data.phone && data.fio)) showMessage('<p class="red-text">Заполните все поля</p>');
     else {
-      let request_options= {
-        headers:{
-          'Content-Type': 'application/json'
-        },
-        mode: 'cors',
-        method: "POST",
-        body: JSON.stringify(data)
-      };
-      fetch('https://idwork.enface.ai/idwork', request_options)
-        .then(res => res.json())
-        .then(res => {
-          console.log(res);
-          if(res && res.ok){
-            showMessage('<p class="green-text">Запрос успешно отправлен</p>');
-          }
-        });
+      if(!validEmail(data.email)){
+        showMessage('<p class="red-text">Введите корректный email</p>');
+      }
+      else if(!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(data.phone)){
+        showMessage('<p class="red-text">Введите корректный телефон</p>');
+      }
+      else{
+        let request_options= {
+          headers:{
+            'Content-Type': 'application/json'
+          },
+          mode: 'cors',
+          method: "POST",
+          body: JSON.stringify(data)
+        };
+        fetch('https://idwork.enface.ai/idwork', request_options)
+          .then(res => res.json())
+          .then(res => {
+            console.log(res);
+            if(res && res.ok){
+              showMessage('<p class="green-text">Запрос успешно отправлен</p>');
+              document.getElementById('phone').value = '';
+              document.getElementById('email').value = '';
+              document.getElementById('fio').value = '';
+            }
+          });
+      }
     }
   };
 };

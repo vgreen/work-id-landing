@@ -143,6 +143,8 @@ window.onload = function () {
     }
   };
 
+  var emailRegex = /\S+@\S+\.\w+/;
+
   var openMenu = function openMenu() {
     document.getElementsByClassName('mobile-menu-content')[0].classList.add('opened');
     document.getElementsByTagName('body')[0].classList.add('stop-scroll');
@@ -162,6 +164,10 @@ window.onload = function () {
     links[i].onclick = closeMenu;
   }
 
+  var validEmail = function validEmail(email) {
+    return emailRegex.test(email);
+  };
+
   var showMessage = function showMessage(msg) {
     document.getElementById('result').innerHTML = msg;
   };
@@ -173,23 +179,32 @@ window.onload = function () {
       'email': document.getElementById('email').value
     };
     if (!(data.email && data.phone && data.fio)) showMessage('<p class="red-text">Заполните все поля</p>');else {
-      var request_options = {
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        mode: 'cors',
-        method: "POST",
-        body: JSON.stringify(data)
-      };
-      fetch('https://idwork.enface.ai/idwork', request_options).then(function (res) {
-        return res.json();
-      }).then(function (res) {
-        console.log(res);
+      if (!validEmail(data.email)) {
+        showMessage('<p class="red-text">Введите корректный email</p>');
+      } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(data.phone)) {
+        showMessage('<p class="red-text">Введите корректный телефон</p>');
+      } else {
+        var request_options = {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          mode: 'cors',
+          method: "POST",
+          body: JSON.stringify(data)
+        };
+        fetch('https://idwork.enface.ai/idwork', request_options).then(function (res) {
+          return res.json();
+        }).then(function (res) {
+          console.log(res);
 
-        if (res && res.ok) {
-          showMessage('<p class="green-text">Запрос успешно отправлен</p>');
-        }
-      });
+          if (res && res.ok) {
+            showMessage('<p class="green-text">Запрос успешно отправлен</p>');
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('fio').value = '';
+          }
+        });
+      }
     }
   };
 };
