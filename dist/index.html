@@ -42,13 +42,16 @@
     </div>
     <div class="email-phone-links container">
         <a href="tel:+74994443576">
-            <div class="email-button">
-                <img src="/phone.4489bc8a.svg">
-                +7 499 444-35-76
+            <div class="phone-button top-button">
+                <img src="/phone.4489bc8a.svg" class="phone-img">
+                <img src="/phone-white.8fe989b5.svg" class="phone-img-white">
+                <span class="phone-number">+7 499 444-35-76</span>
             </div>
         </a>
         <a href="mailto:sales@enface.ai">
-            sales@enface.ai
+            <div class="email-button top-button">
+                Оставить заявку
+            </div>
         </a>
     </div>
 </div>
@@ -97,11 +100,24 @@
     <div class="title section">
         <div class="title-wrapper">
             <h1 class="main-title">
-                Система контроля реально отбработанного времени сотрудников на строительной площадке
+                Мониторинг работ сотрудников на объекте
             </h1>
             <h2 class="main-subtitle">
-                Работает на основе распознавания лиц
+                Контролируйте реально отработанное время сотрудников на строительной площадке с системой распознавания
+                лиц.
             </h2>
+            <div class="main-undertext">
+                <p>
+                    Получите <span style="font-weight: bold">консультацию специалиста</span>
+                    и коммерческое предложение
+                    по подключению системы
+                </p>
+                <a href="mailto:sales@enface.ai">
+                    <div class="title-email-button top-button">
+                        Оставить заявку
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -235,74 +251,83 @@
             </div>
         </div>
     </div>
-    <a id="start-mobile" class="hash"></a>
 </div>
-<div class="start-section section">
-    <div class="start card">
-        <div class="start-description">
-            <h2 class="start-title">Начните прямо сейчас</h2>
-            <p class="start-price">75 рублей</p>
-            <p class="start-price-label">
-                за сотрудника в месяц
-            </p>
-            <a href="#form">
-                <button class="start-button">Подключить</button>
-            </a>
-        </div>
-        <img src="/Money.e27fb0e5.svg">
-    </div>
-</div>
-<div class="requirements section">
-    <div class="requirements-container container">
-        <a id="requirements" class="hash"></a>
-        <h2>Что потребуется</h2>
-        <div class="requirements-item">
-            <img src="/Tablet_1.7e50123e.svg">
-            <div class="requirements-description container">
-                <h3>
-                    Любой Android планшет
-                </h3>
-                <ul class="requirements-list">
-                    <li><span>Камера от 1.3 мп</span></li>
-                    <li><span>Выход в интернет</span></li>
-                </ul>
-                <p>
-                    Ориентировочная цена 7 000 ₽
+<div class="bottom-wrapper">
+    <div class="start-section section">
+        <div class="start card">
+            <div class="start-description">
+                <h2 class="start-title">Начните прямо сейчас</h2>
+                <p class="start-price">75 рублей</p>
+                <p class="start-price-label">
+                    за сотрудника в месяц
                 </p>
+                <a href="#form">
+                    <button class="start-button">Подключить</button>
+                </a>
+            </div>
+            <img src="/Money.e27fb0e5.svg">
+            <a id="start-mobile"></a>
+        </div>
+    </div>
+    <div class="requirements section">
+        <div class="requirements-container container">
+            <a id="requirements" class="hash"></a>
+            <h2>Что потребуется</h2>
+            <div class="requirements-item">
+                <img src="/Tablet_1.7e50123e.svg">
+                <div class="requirements-description container">
+                    <h3>
+                        Любой Android планшет
+                    </h3>
+                    <ul class="requirements-list">
+                        <li><span>Камера от 1.3 мп</span></li>
+                        <li><span>Выход в интернет</span></li>
+                    </ul>
+                    <p>
+                        Ориентировочная цена 7 000 ₽
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="form-section section container">
-    <a id="form" class="hash"></a>
-    <div class="form-card card">
-        <div class="form container">
-            <h2 class="form-title">Напишите нам</h2>
-            <p class="form-subtitle">Оставьте заявку и наш менеджер свяжется с вами для уточнения подробностей.</p>
-            <label class="form-input">
-                <p>Телефон</p>
-                <input type="tel" id="phone" placeholder="+7 000 000 00 00">
-            </label>
-            <label class="form-input">
-                <p>Компания</p>
-                <input type="text" id="fio" placeholder="Название Вашей компании">
-            </label>
-            <label class="form-input">
-                <p>E-mail</p>
-                <input type="email" id="email" placeholder="example@mail.com">
-            </label>
-            <label><p id="result"></p></label>
-            <button id="submit-form" class="form-button">Отправить</button>
+    <div class="form-section section container">
+        <a id="form" class="hash"></a>
+        <div class="form-card card">
+            <div class="form container">
+                <h2 class="form-title">Напишите нам</h2>
+                <p class="form-subtitle">Оставьте заявку и наш менеджер свяжется с вами для уточнения подробностей.</p>
+                <label class="form-input">
+                    <p>Телефон</p>
+                    <input type="tel" id="phone" placeholder="+7 000 000 00 00">
+                </label>
+                <label class="form-input">
+                    <p>Компания</p>
+                    <input type="text" id="fio" placeholder="Название Вашей компании">
+                </label>
+                <label class="form-input">
+                    <p>E-mail</p>
+                    <input type="email" id="email" placeholder="example@mail.com">
+                </label>
+                <label><p id="result"></p></label>
+                <button id="submit-form" class="form-button">Отправить</button>
+                <div class="form-info">
+                    Нажимая кнопку “Отправить”, Вы соглашаетесь с политикой обработки персональных данных
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="footer section container">
-    <p><a href="https://enface.ai/"> © enface.ai</a></p>
-    <br>
-    <p><a href="tel:+74994443576">+7 499 444-35-76</a></p>
-    <br>
-    <p style="font-size: 14px"><a href="https://enface.ai/">Решение построено на базе платформы распознавания лиц Enface
-        Ai Platform</a></p>
+    <div class="footer section container">
+        <div class="top-footer">
+            <img src="/Logo_White.153b17ba.svg">
+            <p><a href="https://enface.ai/"> © enface.ai</a></p>
+            <p><a href="tel:+74994443576">+7 499 444-35-76</a></p>
+        </div>
+        <p style="font-size: 14px;">
+            <a href="https://enface.ai/">
+                Решение построено на базе платформы распознавания лиц Enface Ai Platform
+            </a>
+        </p>
+    </div>
 </div>
 <script src="//code-ya.jivosite.com/widget/NnG2toHJoH" async=""></script>
 <script src="/scripts.b71a6038.js"></script>
