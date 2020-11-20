@@ -39,8 +39,28 @@ window.onload = () => {
     document.getElementsByTagName('body')[0].classList.remove('stop-scroll');
   };
 
+
+  const closeModal = () => {
+    document.getElementById('modal').classList.remove('isShown');
+    document.getElementById('shadow').classList.remove('isShown');
+    document.body.classList.remove('stop-scroll');
+  };
+
+
+  const showModal = (isOk) => {
+    document.getElementById('modal-result').innerHTML =
+      isOk
+        ? '<h2>Отлично!</h2><p>В течение ближайшего времени мы свяжемся с Вами</p>'
+        : '<h2>Что-то пошло не так...</h2><p>Проблемы с соединением, попробуйте позже</p>';
+    document.getElementById('modal').classList.add('isShown');
+    document.getElementById('shadow').classList.add('isShown');
+    // document.body.classList.add('stop-scroll');
+  };
+
+
   document.getElementsByClassName('open')[0].onclick = openMenu;
   document.getElementsByClassName('close')[0].onclick = closeMenu;
+  document.getElementById('modal-button').onclick = closeModal;
 
   const links = document.getElementsByClassName('mobile-menu-item');
   for (let i = 0; i < links.length; i++) {
@@ -83,12 +103,16 @@ window.onload = () => {
           .then(res => {
             console.log(res);
             if(res && res.ok){
-              showMessage('<p class="green-text">Запрос успешно отправлен</p>');
+              showMessage('');
+              showModal(true);
               document.getElementById('phone').value = '';
               document.getElementById('email').value = '';
               document.getElementById('fio').value = '';
             }
-          });
+          })
+          .catch(() => {
+            showModal(false);
+          })
       }
     }
   };

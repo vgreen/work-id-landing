@@ -156,8 +156,21 @@ window.onload = function () {
     document.getElementsByTagName('body')[0].classList.remove('stop-scroll');
   };
 
+  var closeModal = function closeModal() {
+    document.getElementById('modal').classList.remove('isShown');
+    document.getElementById('shadow').classList.remove('isShown');
+    document.body.classList.remove('stop-scroll');
+  };
+
+  var showModal = function showModal(isOk) {
+    document.getElementById('modal-result').innerHTML = isOk ? '<h2>Отлично!</h2><p>В течение ближайшего времени мы свяжемся с Вами</p>' : '<h2>Что-то пошло не так...</h2><p>Проблемы с соединением, попробуйте позже</p>';
+    document.getElementById('modal').classList.add('isShown');
+    document.getElementById('shadow').classList.add('isShown'); // document.body.classList.add('stop-scroll');
+  };
+
   document.getElementsByClassName('open')[0].onclick = openMenu;
   document.getElementsByClassName('close')[0].onclick = closeMenu;
+  document.getElementById('modal-button').onclick = closeModal;
   var links = document.getElementsByClassName('mobile-menu-item');
 
   for (var i = 0; i < links.length; i++) {
@@ -198,11 +211,14 @@ window.onload = function () {
           console.log(res);
 
           if (res && res.ok) {
-            showMessage('<p class="green-text">Запрос успешно отправлен</p>');
+            showMessage('');
+            showModal(true);
             document.getElementById('phone').value = '';
             document.getElementById('email').value = '';
             document.getElementById('fio').value = '';
           }
+        }).catch(function () {
+          showModal(false);
         });
       }
     }
@@ -236,7 +252,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53467" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62095" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

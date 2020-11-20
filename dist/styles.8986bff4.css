@@ -40,6 +40,8 @@
     box-sizing: border-box;
 }
 
+/* Utils */
+
 .section{
     width: 100%;
     padding: 40px 7%;
@@ -61,6 +63,12 @@
     flex-direction: column;
     align-items: center;
 }
+
+.stop-scroll{
+    overflow: hidden;
+}
+
+/* Top section & header */
 
 .header {
     transition: all .1s ease;
@@ -323,6 +331,8 @@
     height: auto;
 }
 
+/* Advantages */
+
 .advantages{
     padding: 80px 0;
     width: 100%;
@@ -365,6 +375,8 @@
             .advantages-item-point > p{
                 text-align: justify;
             }
+
+/*     Solutions       */
 
 .solution{
     padding: 50px 0;
@@ -411,6 +423,9 @@
                 color: #201f3b;
                 margin-bottom: 50px;
             }
+
+/*     How to section       */
+
 .how-to{
     padding: 100px 0 300px 0;
 }
@@ -464,6 +479,8 @@
     background: radial-gradient(187.6% 105.44% at 17.15% -5.44%, #538DF7 0%, #1F1E6C 100%), radial-gradient(152.92% 253.98% at 11.28% -23.53%, #5D93F7 0%, #0C4FCB 100%), #C4C4C4;
 }
 
+/* Prices, get started */
+
 .start-section{
     height: 200px;
     display: flex;
@@ -506,6 +523,8 @@
         background-color: #2146D9;
         margin-top: 33px;
     }
+
+/*  Requirements   */
 
 .requirements {
     height: 700px;
@@ -551,6 +570,9 @@
                     font-size: 15px;
                     margin-right: 4px;
                 }
+
+/*      Form          */
+
 .form-section{
     padding: 40px 0;
 }
@@ -649,6 +671,9 @@
         .form-button:focus{
             border: none;
         }
+
+/*   Footer     */
+
 .footer{
     height: 120px;
 }
@@ -679,6 +704,9 @@
             color: white;
         }
 
+
+/*   Mobile menu     */
+
 .mobile-menu{
     z-index: 9;
     position: fixed;
@@ -692,23 +720,14 @@
     background-color: rgba(75, 75, 75, 0.76);
 }
 
-.burger {
-    width: 25px;
-    justify-content: center;
-    align-items: flex-start;
-    cursor: pointer;
-}
-
-.burger > .line{
-    height: 3px;
-    background: white;
-    width: 100%;
-    margin: 3px 0;
+.open{
+    height: 35px;
+    width: auto;
 }
 
 .mobile-menu-content{
     position: fixed;
-    background: #538df7;
+    background: white;
     top: 0;
     left: 0;
     right: 0;
@@ -743,10 +762,12 @@
 }
 
 .mobile-menu-item{
+    font-family: Inter;
     width: 100%;
     height: 50px;
-    font-size: 18px;
-    color: white;
+    font-size: 14px;
+    line-height: 17px;
+    color: #201F3B;
     margin-bottom: 7px;
 }
 
@@ -757,6 +778,106 @@
 .green-text{
     color: rgba(7, 159, 28, 0.65);
 }
+
+.mobile-footer{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.mobile-footer > a{
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+    .mobile-email-button{
+        font-size: 14px;
+        line-height: 18px;
+        color: white;
+        width: 100%;
+        height: 50px;
+        background: #2146D9;
+        box-shadow: 0px 4px 16px rgba(43, 178, 255, 0.35);
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    .mobile-phone-button{
+        font-size: 14px;
+        line-height: 18px;
+        width: 100%;
+        height: 50px;
+        background: #FFFFFF;
+        border: 1px solid #F5F5F6;
+        box-sizing: border-box;
+        border-radius: 4px;
+        justify-content: center;
+    }
+
+    .mobile-phone-button > img {
+        margin-right: 10px;
+    }
+
+
+/*  Modal  */
+
+.modal-shadow{
+    display: none;
+    transition: all .4s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1F1E6C;
+    opacity: .3;
+}
+
+.modal{
+    transition: all .5s ease-out;
+    display: none;
+    position: fixed;
+    height: 320px;
+    width: 420px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 50;
+    background: white;
+    border-radius: 20px;
+    padding: 48px;
+    justify-content: space-between;
+}
+
+#modal-result > h2 {
+    text-align: center;
+    font-family: StyreneAWeb, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#modal-result > p {
+    margin-top: 30px;
+    text-align: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #696C76;
+}
+
+.modal > button{
+    width: 100%;
+}
+
+
+.isShown{
+    display: flex;
+}
+
+
+/* Mobile styles */
 
 @media( max-width: 1024px ){
     .close {
