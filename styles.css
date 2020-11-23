@@ -321,6 +321,7 @@
             height: 60px;
             background: #2146D9;
             color: white;
+            font-size: 14px;
         }
 
 .first-up-right{
@@ -345,12 +346,17 @@
         margin: 15px 0 25px 0;
     }
 
-    .advantages-container > .elements{
+    .elements{
+        flex-wrap: wrap;
+        width: 1024px;
+        justify-content: center;
         margin-top: 25px;
         display: flex;
+        margin-bottom: 25px;
     }
         .advantages-item{
-            width: 350px;
+            margin-top: 35px;
+            width: 310px;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -909,13 +915,14 @@
     }
 
     .first-section-wrapper{
-        background-size: auto 60%;
+        background-size: auto 100%;
         padding-top: 0px;
-        height: 400px;
+        height: 600px;
     }
     .title-wrapper{
         position: absolute;
         z-index: 3;
+        width: 60%;
     }
     .title:after {
         content: '';
@@ -943,16 +950,13 @@
     .title {
         position: relative;
         width: 100%;
-        height: 400px;
+        height: 600px;
         z-index: 3;
     }
 
-    .title-wrapper{
-        padding: 50px 0;
-    }
     .main-title{
         width: 100%;
-        font-size: 24px;
+        font-size: 28px;
         font-weight: bold;
         color: white;
         height: auto;
@@ -962,7 +966,18 @@
     .main-subtitle{
         width: 100%;
         color: white;
-        font-size: 15px;
+        font-size: 18px;
+    }
+
+    .main-undertext{
+        width: 260px;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .title-email-button{
+        margin-top: 15px;
+        width: 100%;
     }
 
     .main-undertext > p{
@@ -974,22 +989,22 @@
         font-weight: bold;
     }
 
-    .advantages-container > .elements{
+    .elements{
+        margin-top: 10px;
+        width: 100vw;
+        padding: 0 50px;
+        justify-content: flex-start;
         flex-direction: column;
-        margin-top: 0;
+        height: 600px;
     }
 
     .advantages-item{
-        width: 100%;
+        width: 49%;
         margin-top: 15px;
     }
 
     .advantages-item-point{
         font-size: 14px;
-    }
-
-    .solution{
-
     }
 
     .solution-title{
@@ -1109,16 +1124,16 @@
 }
 
 @media(max-width: 800px){
-
-    .title{
-        height: 600px;
+    .first-section-wrapper{
+        background-size: auto 60%;
     }
 
-    .first-section-wrapper{
-        height: 600px;
+    .title-wrapper{
+        width: auto;
     }
 
     .main-undertext{
+        margin-top: 35px;
         flex-direction: column;
         width: 100%;
     }
@@ -1131,6 +1146,14 @@
     .title-email-button{
         margin-top: 15px;
         width: calc(100% - 14px);
+    }
+
+    .elements{
+        height: auto;
+    }
+
+    .advantages-item{
+        width: 100%;
     }
 
     .requirements-container > h2{
